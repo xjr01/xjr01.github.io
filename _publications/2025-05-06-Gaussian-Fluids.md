@@ -8,6 +8,6 @@ excerpt: ''
 date: 2025-05-06
 venue: 'SIGGRAPH 2025'
 paperpath: '/files/GaussianFluids.pdf'
-projecturl: ''
+projecturl: 'https://xjr01.github.io/GaussianFluids/'
 codeurl: 'https://github.com/xjr01/Gaussian-Fluids-Code'
 ---
