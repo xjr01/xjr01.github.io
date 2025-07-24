@@ -22,13 +22,20 @@
       </div>
       <div class="paper-content">
         <h3 class="paper-title">
-          <a href="{{ post.projecturl }}">{{ post.title }}</a>
+          {% if post.projecturl %}
+            <a href="{{ post.projecturl }}">{{ post.title }}</a>
+          {% else %}
+            <a href="{{ post.doi }}">{{ post.title }}</a>
+          {% endif %}
         </h3>
         <p class="paper-authors">{{ post.authors }}</p>
         <p class="paper-venue"><em>{{ post.venue }}</em></p>
         <div class="paper-links">
           {% if post.paperpath %}
             <a href="{{ post.paperpath | prepend: base_path }}" class="paper-link">PDF</a>
+          {% endif %}
+          {% if post.doi %}
+            <a href="{{ post.doi }}" class="paper-link">DOI</a>
           {% endif %}
           {% if post.projecturl %}
             <a href="{{ post.projecturl }}" class="paper-link">Project Page</a>
